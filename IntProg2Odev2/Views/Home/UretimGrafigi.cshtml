@@ -1,0 +1,65 @@
+﻿@model List<IntProg2Odev2.Models.UretimGrafigi>
+
+@{
+    ViewBag.Title = "UretimGrafigi";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üretim Grafiği</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Fıstık Üretimi - Son 6 Yıl</h2>
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var randomNumber = Math.floor(Math.random() * 257);
+        var ctx = document.getElementById('myChart').getContext('2d');
+
+        var cityData = {
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022'],
+            datasets: [
+                @foreach(var item in Model)
+                {
+                    <text>
+                        {
+                            label: '@item.SehirAdi',
+                            data: [@item.UretimMiktari2017,
+                            @item.UretimMiktari2018,
+                            @item.UretimMiktari2019,
+                            @item.UretimMiktari2020,
+                            @item.UretimMiktari2021,
+                            @item.UretimMiktari2022],
+                            backgroundColor: 'rgba(@(new Random().Next(0, 255)), @(new Random().Next(0, 255)), @(new Random().Next(0, 255)), 0.5)',
+                            borderColor: 'rgba(@(new Random().Next(0, 255)), @(new Random().Next(0, 255)), @(new Random().Next(0, 255)), 1)',
+                            borderWidth: 1
+                        },
+                    </text>
+
+                }
+            ]
+        };
+
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: cityData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

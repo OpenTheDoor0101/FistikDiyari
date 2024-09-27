@@ -1,0 +1,51 @@
+﻿@model List<IntProg2Odev2.Models.FistikCinsi>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fıstık Çeşitleri</title>
+    <style>
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #e9967a;
+        }
+
+        tbody tr {
+            background-color: #e9967a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Fıstık Çeşidi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ul>
+                @foreach (var fistik in Model)
+                {
+                <tr>
+                    <td><li>@fistik.FistikCinsi1</li></td>
+                </tr>
+                 }
+                </ul>
+        </tbody>
+    </table>
+
+</body>
+</html>

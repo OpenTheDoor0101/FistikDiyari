@@ -1,0 +1,69 @@
+﻿@model IEnumerable<IntProg2Odev2.Models.UretimGrafigi>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" style="color:white;">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SehirAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UretimMiktari2017)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UretimMiktari2018)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UretimMiktari2019)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UretimMiktari2020)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UretimMiktari2021)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UretimMiktari2022)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SehirAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UretimMiktari2017)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UretimMiktari2018)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UretimMiktari2019)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UretimMiktari2020)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UretimMiktari2021)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UretimMiktari2022)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

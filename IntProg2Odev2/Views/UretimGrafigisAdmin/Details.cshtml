@@ -1,0 +1,74 @@
+﻿@model IntProg2Odev2.Models.UretimGrafigi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UretimGrafigi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SehirAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SehirAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UretimMiktari2017)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UretimMiktari2017)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UretimMiktari2018)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UretimMiktari2018)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UretimMiktari2019)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UretimMiktari2019)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UretimMiktari2020)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UretimMiktari2020)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UretimMiktari2021)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UretimMiktari2021)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UretimMiktari2022)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UretimMiktari2022)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

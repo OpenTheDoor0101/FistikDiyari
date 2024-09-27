@@ -1,0 +1,68 @@
+﻿@model List<IntProg2Odev2.Models.Table>
+
+@{
+    ViewBag.Title = "Ana Sayfa";
+}
+
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="~/Content/assets/img/intro.jpeg" alt="..." />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-lower">Fıstık</span>
+                </h2>
+                <p class="mb-3">
+                    Fıstık, dünya genelinde sevilen ve besleyici özelliklere sahip olan bir kuruyemiş türüdür.
+                    Genellikle kabuklu bir meyve olan fıstık, iç kısmındaki yenilebilir tohumuyla bilinir.
+                    Lezzetli ve doyurucu olan fıstık, protein, lif, vitaminler ve mineraller açısından zengin bir kaynaktır.
+                    Hem tuzlu hem de tatlı yemeklerde kullanılabilen fıstık,
+                    salatalardan atıştırmalıklara kadar geniş bir yelpazede kullanım bulur.
+                    Aynı zamanda sağlıklı yağlar içererek kalp sağlığını destekler ve enerji sağlar.
+                    Fıstık, hem besleyici özellikleri hem de karakteristik lezzeti ile
+                    birçok kişi tarafından tercih edilen bir atıştırmalıktır.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container mt-5">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            @foreach (var slider in Model)
+            {
+                <div class="carousel-item active">
+                    <img src="@slider.slider_url" alt="Slider Image" width="100%" height="400">
+                </div>
+            }
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner bg-faded text-center rounded">
+                    <h2 class="section-heading mb-4">
+                    </h2>
+                    <p class="mb-0">
+                        Fıstığın faydaları arasında yüksek protein ve lif içeriği, sağlıklı yağlar sağlaması,
+                        vitamin ve minerallerle zenginleştirmesi, kalp sağlığını desteklemesi,
+                        enerji verici olması ve antioksidan özelliklere sahip olması bulunmaktadır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

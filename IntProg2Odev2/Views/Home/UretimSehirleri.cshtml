@@ -1,0 +1,62 @@
+﻿@model List<IntProg2Odev2.Models.UretimSehirleri>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Üretim Şehirleri</title>
+    <style>
+        /* Sadece bu sayfa için geçerli olan stil özellikleri */
+        .custom-uretim-sehirleri {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+            .custom-uretim-sehirleri table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+
+            .custom-uretim-sehirleri th,
+            .custom-uretim-sehirleri td {
+                padding: 10px;
+                text-align: center;
+            }
+
+            .custom-uretim-sehirleri th {
+                background-color: #8B4513 !important; /* Açık Kahverengi */
+                font-weight: bold !important;
+                color: white !important; /* Beyaz Yazı Rengi */
+            }
+
+            .custom-uretim-sehirleri tr:nth-child(even),
+            .custom-uretim-sehirleri tr:nth-child(odd) {
+                background-color: #D2B48C !important; /* Kahverengi Arka Plan Rengi */
+            }
+
+            .custom-uretim-sehirleri td {
+                font-weight: bold !important;
+                color: white !important; /* Beyaz Yazı Rengi */
+            }
+    </style>
+</head>
+<body>
+
+    <h1 class="text-center">Fıstığın Üretildiği Şehirler</h1>
+
+    <table class="custom-uretim-sehirleri">
+        <thead>
+            <tr>
+                <th>Fıstık Üretilen Şehirler</th>
+            </tr>
+        </thead>
+            @foreach (var UretimSehri in Model)
+            {
+                <tr>
+                    <td><li>@UretimSehri.SehirAdi</li></td>
+                </tr>
+            }
+    </table>
+
+</body>
+</html>
